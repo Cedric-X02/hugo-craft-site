@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'roobert-regularregular';
+    src: url('roobert-regular-webfont.woff2') format('woff2'),
+         url('roobert-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a.left
+{
+    position: relative;
+  background-color: #FF00FF;
+  
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FF00FF;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+a.left:hover:before {
+  visibility: visible;
+  background-color: #FF00FF;
+  width: 100%;
+}

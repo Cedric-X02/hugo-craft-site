@@ -1,0 +1,23 @@
+<div id="player" display="none" align="center"></div>
+    <div id="scriptplayer" display="none" align="center"><script>
+        if (p2pml.hlsjs.Engine.isSupported()) {
+            var engine = new p2pml.hlsjs.Engine();
+
+            var player = new Clappr.Player({
+                parentId: "#player",
+                source: "http://91.173.107.210/hls/test.m3u8",
+                mute: true,
+                autoPlay: true,
+                playback: {
+                    hlsjsConfig: {
+                        liveSyncDurationCount: 7,
+                        loader: engine.createLoaderClass()
+                    }
+                }
+            });
+
+            p2pml.hlsjs.initClapprPlayer(player);
+        } else {
+            document.write("Not supported :(");
+        }
+    </script></div>
